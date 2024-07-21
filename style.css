@@ -1,44 +1,113 @@
-body {
-    font-family: Arial, sans-serif;
+/* Resetting default browser styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Styling the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Styling the header */
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
     text-align: center;
+    padding: 1.5em 0;
+    font-size: 2em;
+    font-weight: bold;
 }
 
+/* Styling the navigation bar */
+nav {
+    background-color: #444;
+    overflow: hidden;
+}
+
+/* Navigation links */
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    text-align: center;
-    background-color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
+    padding: 1em 2em;
     text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+nav ul li a:hover {
+    background-color: #555;
+    color: #ff0;
+}
+
+/* Styling sections */
 section {
     padding: 2em;
-    margin: 1em;
+    margin: 2em auto;
+    max-width: 1000px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s;
 }
 
+section:hover {
+    transform: scale(1.02);
+}
+
+/* About section */
+#about {
+    background: #f7f7f7;
+}
+
+/* Projects section */
+#projects {
+    background: #fff;
+}
+
+/* Contact section */
+#contact {
+    background: #f7f7f7;
+}
+
+/* Footer styling */
 footer {
     background-color: #333;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 1em 0;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        padding: 1em;
+        text-align: center;
+    }
+
+    section {
+        margin: 1em;
+        padding: 1em;
+    }
 }
